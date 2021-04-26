@@ -1,7 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 export const List = () => {
-  const items = ['one', 'two', 'three'];
+  const items = useSelector(state => state.items)
   return (
     <ul className='list'>
       {items.map((item, idx) => (
