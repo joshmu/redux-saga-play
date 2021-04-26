@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { List } from './components/List';
+import { Toggle } from './components/Toggle';
 
 function App() {
+
+  const handleIncrement = () => {}
+  const handleDecrement = () => {}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Toggle />
+      <div className="controls">
+        <button onClick={handleIncrement} className='control-item'>+</button>
+        <button onClick={handleDecrement} className='control-item'>-</button>
+      </div>
+      <List /> 
     </div>
   );
 }
