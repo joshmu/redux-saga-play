@@ -10,18 +10,23 @@ import {
   REMOVE_ITEM_SAGA,
   SHOW_SAGA,
 } from './redux/actionTypes'
+import { useState } from 'react'
 
 function App() {
   const showing = useSelector(state => state.showHide)
   const items = useSelector(state => state.items)
+  const [test, setTest] = useState(false)
 
   const addItem = () => action(ADD_ITEM_SAGA)
   const removeItem = () => action(REMOVE_ITEM_SAGA)
   const toggle = state => action(state ? HIDE_SAGA : SHOW_SAGA)
+  const handleTest = () => setTest(true)
 
   return (
     <div className='App'>
       <Toggle onClick={() => toggle(showing)} totalItems={items.length} />
+      <button onClick={handleTest}>test</button>
+      {test && <h1>hello</h1>}
       {showing && (
         <>
           <div className='controls'>

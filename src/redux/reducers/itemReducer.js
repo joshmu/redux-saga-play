@@ -1,6 +1,6 @@
 import { ADD_ITEM, REMOVE_ITEM } from "../actionTypes";
 
-const initialState = [];
+const initialState = [11,22,33];
 
 export const itemReducer = (state = initialState, action) => {
   switch (action.type) {
