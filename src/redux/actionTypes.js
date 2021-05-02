@@ -1,4 +1,8 @@
 export const ADD_ITEM = 'ADD_ITEM'
+export const ADD_ITEM_SAGA = 'ADD_ITEM_SAGA'
 export const REMOVE_ITEM = 'REMOVE_ITEM'
+export const REMOVE_ITEM_SAGA = 'REMOVE_ITEM_SAGA'
 export const HIDE = 'HIDE'
+export const HIDE_SAGA = 'HIDE_SAGA'
 export const SHOW = 'SHOW'
+export const SHOW_SAGA = 'SHOW_SAGA'

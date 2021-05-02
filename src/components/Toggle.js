@@ -1,15 +1,9 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { toggle } from '../redux/actions'
 
-export const Toggle = () => {
-  const items = useSelector(state => state.items)
-  const showing = useSelector(state => state.showHide)
-  const dispatch = useDispatch()
-
+export const Toggle = ({onClick, totalItems}) => {
   return (
-    <button onClick={() => dispatch(toggle(!showing))} className='toggle-btn'>
-      Toggle ({items.length})
+    <button onClick={onClick} className='toggle-btn'>
+      Toggle ({totalItems})
     </button>
   )
 }
