@@ -1,11 +1,11 @@
-import { TYPES } from "../actionTypes";
+import { HIDE, SHOW } from "../actionTypes";
 
 const initialState = true;
 export const toggleReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TYPES.SHOW:
+    case SHOW:
       return true;
-    case TYPES.HIDE:
+    case HIDE:
       return false;
     default:
       return state;

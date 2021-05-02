@@ -1,19 +1,19 @@
-import { TYPES } from './actionTypes';
+import { ADD_ITEM, HIDE, REMOVE_ITEM, SHOW } from './actionTypes'
 
 export const addItem = () => ({
-  type: TYPES.ADD_ITEM,
-  payload: Math.floor(Math.random() * 1000)
-});
+  type: ADD_ITEM,
+  payload: Math.floor(Math.random() * 1000),
+})
 
 export const removeItem = () => ({
-  type: TYPES.REMOVE_ITEM,
-});
+  type: REMOVE_ITEM,
+})
 
 export const toggle = show =>
   show
     ? {
-        type: TYPES.SHOW,
+        type: SHOW,
       }
     : {
-        type: TYPES.HIDE,
-      };
+        type: HIDE,
+      }
