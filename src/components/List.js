@@ -1,7 +1,6 @@
 import React from 'react';
 
-export const List = () => {
-  const items = ['one', 'two', 'three'];
+export const List = ({items}) => {
   return (
     <ul className='list'>
       {items.map((item, idx) => (

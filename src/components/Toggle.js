@@ -1,12 +1,9 @@
 import React from 'react'
 
-export const Toggle = () => {
-  const handleToggle = () => {
-    window.alert('toggle')
-  }
+export const Toggle = ({onClick}) => {
 
   return (
-    <button onClick={handleToggle} className='toggle-btn'>
+    <button onClick={onClick} className='toggle-btn'>
       Toggle
     </button>
   )
